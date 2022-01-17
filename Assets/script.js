@@ -16,16 +16,21 @@ function generatePassword (password){
         else if ( value === 20) { var symbol = ")"}
         else {var symbol = "?"}
 
-        password = symbol
+        password = symbol + capitalLetter + smallLetters + numbers
 
     } else if (symbols === "no" || symbols === "NO") {
         var symbols = "" || null;
   
         return password;
-    } else {window.prompt("Enter YES or NO")}
+    } else {window.prompt("Enter YES or NO")};
   
   
     var capitalLetters = window.prompt ("Do you want UPPERCASE letters?") 
+      
+
+    var smallLetters = window.prompt ("Do you want lowercase letters?")
+    
+    var numbers = window.prompt ("Do you want numbers?")
 
 }
 
