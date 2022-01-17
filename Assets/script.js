@@ -1,6 +1,9 @@
 // Assignment code here
 var value = Math.floor(Math.random()* 20 + 6);
 
+console.log(value + 10)
+
+
 function generatePassword (password){
   var symbols = window.prompt("Do you want symbols?") 
     if (symbols === "yes" || symbols === "YES") { 
@@ -14,9 +17,8 @@ function generatePassword (password){
         else if (value === 16) { var symbols = "*"}
         else if (value === 18) { var symbols = "("}
         else if ( value === 20) { var symbol = ")"}
-        else {var symbol = "?"}
+        else {var symbols = "?"}
 
-        password = symbol + capitalLetter + smallLetters + numbers
 
     } else if (symbols === "no" || symbols === "NO") {
         var symbols = "" || null;
@@ -24,13 +26,15 @@ function generatePassword (password){
         return password;
     } else {window.prompt("Enter YES or NO")};
   
-  
+
     var capitalLetters = window.prompt ("Do you want UPPERCASE letters?") 
       
 
     var smallLetters = window.prompt ("Do you want lowercase letters?")
-    
+
     var numbers = window.prompt ("Do you want numbers?")
+
+    password = symbol + capitalLetter + smallLetters + numbers
 
 }
 
